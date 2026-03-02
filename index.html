@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | BTS SIO SISR - Cybers&eacute;curit&eacute;</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+    <div class="holo-grid"></div>
+
+    <!-- Toggle Dark/Light -->
+    <button class="theme-toggle" id="theme-toggle" title="Changer de th&egrave;me">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-logo">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-text">S</span>
+            <span class="logo-bracket">/&gt;</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#profil" class="nav-link active" data-section="profil">
+                <i class="fas fa-user"></i><span>Profil</span>
+            </a></li>
+            <li><a href="#formations" class="nav-link" data-section="formations">
+                <i class="fas fa-graduation-cap"></i><span>Formations</span>
+            </a></li>
+            <li><a href="#experiences" class="nav-link" data-section="experiences">
+                <i class="fas fa-briefcase"></i><span>Exp&eacute;riences</span>
+            </a></li>
+            <li><a href="#projets" class="nav-link" data-section="projets">
+                <i class="fas fa-folder-open"></i><span>Projets</span>
+            </a></li>
+            <li><a href="#certifications" class="nav-link" data-section="certifications">
+                <i class="fas fa-certificate"></i><span>Certifications</span>
+            </a></li>
+            <li><a href="#veille" class="nav-link" data-section="veille">
+                <i class="fas fa-lightbulb"></i><span>Veille Tech</span>
+            </a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">
+                <i class="fas fa-envelope"></i><span>Contact</span>
+            </a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <div class="ai-pulse"></div>
+            <span class="ai-status">SECURE</span>
+        </div>
+    </nav>
+
+    <button class="mobile-menu-btn" id="mobile-menu-btn">
+        <span></span><span></span><span></span>
+    </button>
+
+    <!-- Contenu principal -->
+    <main class="main-content">
+
+        <!-- ══════════ PROFIL ══════════ -->
+        <section id="profil" class="section active">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-user"></i></div>
+                <h2 class="section-title">Profil</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="profil-hero">
+                <div class="profil-avatar-container">
+                    <div class="avatar-ring"></div>
+                    <div class="avatar-ring ring-2"></div>
+                    <div class="avatar-ring ring-3"></div>
+                    <!-- MODIFIABLE: Remplacez l'ic&ocirc;ne par <img src="photo.jpg" alt=""> -->
+                    <div class="avatar-placeholder">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                </div>
+
+                <div class="profil-info">
+                    <div class="glitch-wrapper">
+                        <!-- MODIFIABLE: Votre nom -->
+                        <h1 class="profil-name glitch" data-text="FORICHON Tom">FORICHON Tom<h1>
+                    </div>
+                    <!-- MODIFIABLE: Votre titre -->
+                    <p class="profil-title typing-effect">BTS SIO SISR | Cybers&eacute;curit&eacute; &amp; Syst&egrave;mes R&eacute;seaux</p>
+
+                    <div class="profil-stats">
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="650">0</span>
+                            <span class="stat-label">Top Root-Me</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="2">0</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="2">0</span>
+                            <span class="stat-label">Concours</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profil-about">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">whoami.sh</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p><span class="terminal-prompt">$</span> <span class="terminal-cmd">whoami</span></p>
+                        <p class="terminal-output">
+                            &Eacute;tudiant en BTS SIO option SISR au Lyc&eacute;e Saint Paul Bourdon Blanc,
+                            passionn&eacute; par la cybers&eacute;curit&eacute; et l'administration syst&egrave;mes &amp; r&eacute;seaux.
+                            Certifi&eacute; eJPT (INE Security) et Voltaire. Class&eacute; top 650 sur Root-Me,
+                            2&egrave;me au CTF Hack'N Game et 3&egrave;me aux WorldSkills Cybers&eacute;curit&eacute;.
+                            Futur &eacute;tudiant en Bachelor Informatique &amp; Cybers&eacute;curit&eacute; &agrave; l'ESILV en alternance.
+                        </p>
+                        <p><span class="terminal-prompt">$</span> <span class="terminal-cmd">cat /etc/skills</span></p>
+                        <div class="skills-cloud">
+                            <span class="skill-tag">Windows Server</span>
+                            <span class="skill-tag">Active Directory</span>
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">Zentyal (SambaAD)</span>
+                            <span class="skill-tag">VMware</span>
+                            <span class="skill-tag">Proxmox</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">WireGuard VPN</span>
+                            <span class="skill-tag">Stormshield</span>
+                            <span class="skill-tag">Zabbix</span>
+                            <span class="skill-tag">Centreon</span>
+                            <span class="skill-tag">GLPI</span>
+                            <span class="skill-tag">OCS Inventory</span>
+                            <span class="skill-tag">FOG</span>
+                            <span class="skill-tag">Wireshark</span>
+                            <span class="skill-tag">Volatility</span>
+                            <span class="skill-tag">Wazuh (XDR)</span>
+                            <span class="skill-tag">Pentest Web</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Bash</span>
+                            <span class="skill-tag">PowerShell</span>
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profil-details-grid">
+                <!-- MODIFIABLE -->
+                <div class="detail-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <span class="detail-label">Localisation</span>
+                        <span class="detail-value">Votre Ville, France</span>
+                    </div>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <span class="detail-label">Email</span>
+                        <span class="detail-value">votre@email.com</span>
+                    </div>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div>
+                        <span class="detail-label">Formation</span>
+                        <span class="detail-value">BTS SIO option SISR</span>
+                    </div>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-language"></i>
+                    <div>
+                        <span class="detail-label">Langue</span>
+                        <span class="detail-value">Anglais</span>
+                    </div>
+                </div>
+                <div class="detail-card">
+                    <i class="fab fa-linkedin"></i>
+                    <div>
+                        <span class="detail-label">LinkedIn</span>
+                        <span class="detail-value">linkedin.com/in/votre-profil</span>
+                    </div>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-flag"></i>
+                    <div>
+                        <span class="detail-label">Root-Me</span>
+                        <span class="detail-value">Top 650 - root-me.org</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════ FORMATIONS ══════════ -->
+        <section id="formations" class="section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-graduation-cap"></i></div>
+                <h2 class="section-title">Formations</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="timeline">
+                <!-- MODIFIABLE -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"><div class="marker-pulse"></div></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-date"><i class="fas fa-calendar-alt"></i> Sept. 2026 - Juin 2027</div>
+                        <h3 class="timeline-title">Bachelor Informatique &amp; Cybers&eacute;curit&eacute;</h3>
+                        <p class="timeline-institution">
+                            <i class="fas fa-university"></i> &Eacute;cole Sup&eacute;rieure d'Ing&eacute;nieurs L&eacute;onard-de-Vinci (ESILV)
+                        </p>
+                        <p class="timeline-description">
+                            Formation en alternance orient&eacute;e informatique et cybers&eacute;curit&eacute;.
+                            Approfondissement des comp&eacute;tences en s&eacute;curit&eacute; offensive et d&eacute;fensive,
+                            architecture r&eacute;seau avanc&eacute;e et gestion de projets SI.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">Alternance</span>
+                            <span class="tag">Cybers&eacute;curit&eacute;</span>
+                            <span class="tag">Bac+3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"><div class="marker-pulse"></div></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-date"><i class="fas fa-calendar-alt"></i> Sept. 2024 - Juin 2026</div>
+                        <h3 class="timeline-title">BTS SIO - Option SISR</h3>
+                        <p class="timeline-institution">
+                            <i class="fas fa-university"></i> Lyc&eacute;e Professionnel Saint Paul Bourdon Blanc
+                        </p>
+                        <p class="timeline-description">
+                            Services Informatiques aux Organisations, option Solutions d'Infrastructure,
+                            Syst&egrave;mes et R&eacute;seaux. Administration r&eacute;seau, virtualisation,
+                            cybers&eacute;curit&eacute;, gestion de parc et d&eacute;ploiement de services.
+                            Brevet de Technicien Sup&eacute;rieur | En cours d'obtention.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">SISR</span>
+                            <span class="tag">R&eacute;seaux</span>
+                            <span class="tag">Cybers&eacute;curit&eacute;</span>
+                            <span class="tag">Virtualisation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"><div class="marker-pulse"></div></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-date"><i class="fas fa-calendar-alt"></i> Sept. 2021 - Juin 2024</div>
+                        <h3 class="timeline-title">Baccalaur&eacute;at Professionnel Syst&egrave;me Num&eacute;rique</h3>
+                        <p class="timeline-institution">
+                            <i class="fas fa-school"></i> Lyc&eacute;e Professionnel Saint Paul Bourdon Blanc
+                        </p>
+                        <p class="timeline-description">
+                            Baccalaur&eacute;at Professionnel Syst&egrave;me Num&eacute;rique.
+                            Obtenu avec la Mention Assez Bien.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">Mention AB</span>
+                            <span class="tag">Syst&egrave;me Num&eacute;rique</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════ EXP&Eacute;RIENCES ══════════ -->
+        <section id="experiences" class="section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-briefcase"></i></div>
+                <h2 class="section-title">Exp&eacute;riences Professionnelles</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="experiences-grid">
+                <div class="experience-card glass-card">
+                    <div class="exp-header">
+                        <div class="exp-company-logo"><i class="fas fa-trophy"></i></div>
+                        <div>
+                            <h3 class="exp-role">CTF - Hack'N Game</h3>
+                            <p class="exp-company">Organis&eacute; par Root-Me</p>
+                        </div>
+                        <span class="exp-type">Concours</span>
+                    </div>
+                    <div class="exp-date"><i class="fas fa-calendar-alt"></i> Avril 2025</div>
+                    <ul class="exp-missions">
+                        <li>2&egrave;me du classement g&eacute;n&eacute;ral</li>
+                        <li>Analyse de log et d&eacute;tection d'anomalies</li>
+                        <li>Injection XSS et SQL</li>
+                        <li>Analyse m&eacute;moire (forensics)</li>
+                    </ul>
+                    <div class="exp-stack">
+                        <span class="stack-item">Forensics</span>
+                        <span class="stack-item">XSS</span>
+                        <span class="stack-item">SQL Injection</span>
+                        <span class="stack-item">Log Analysis</span>
+                    </div>
+                </div>
+
+                <div class="experience-card glass-card">
+                    <div class="exp-header">
+                        <div class="exp-company-logo"><i class="fas fa-medal"></i></div>
+                        <div>
+                            <h3 class="exp-role">WorldSkills - Cybers&eacute;curit&eacute;</h3>
+                            <p class="exp-company">En partenariat avec Root-Me</p>
+                        </div>
+                        <span class="exp-type">Concours</span>
+                    </div>
+                    <div class="exp-date"><i class="fas fa-calendar-alt"></i> Janvier 2025</div>
+                    <ul class="exp-missions">
+                        <li>3&egrave;me du classement</li>
+                        <li>&Eacute;preuves de cybers&eacute;curit&eacute; en conditions r&eacute;elles</li>
+                        <li>Comp&eacute;tition nationale de s&eacute;curit&eacute; informatique</li>
+                    </ul>
+                    <div class="exp-stack">
+                        <span class="stack-item">Cybers&eacute;curit&eacute;</span>
+                        <span class="stack-item">Root-Me</span>
+                        <span class="stack-item">CTF</span>
+                    </div>
+                </div>
+
+                <div class="experience-card glass-card">
+                    <div class="exp-header">
+                        <div class="exp-company-logo"><i class="fas fa-building"></i></div>
+                        <div>
+                            <h3 class="exp-role">Stagiaire - I.MEDIA</h3>
+                            <p class="exp-company">I.MEDIA</p>
+                        </div>
+                        <span class="exp-type">Stage</span>
+                    </div>
+                    <div class="exp-date"><i class="fas fa-calendar-alt"></i> D&eacute;cembre 2023 - F&eacute;vrier 2024</div>
+                    <ul class="exp-missions">
+                        <li>Migration de donn&eacute;es</li>
+                        <li>Installation / R&eacute;installation Windows</li>
+                        <li>Installation de logiciel</li>
+                        <li>D&eacute;montage de mat&eacute;riel informatique</li>
+                        <li>Changement de composant d'ordinateur</li>
+                    </ul>
+                    <div class="exp-stack">
+                        <span class="stack-item">Windows</span>
+                        <span class="stack-item">Migration</span>
+                        <span class="stack-item">Hardware</span>
+                    </div>
+                </div>
+
+                <div class="experience-card glass-card">
+                    <div class="exp-header">
+                        <div class="exp-company-logo"><i class="fas fa-landmark"></i></div>
+                        <div>
+                            <h3 class="exp-role">Stagiaire - URSSAF</h3>
+                            <p class="exp-company">URSSAF</p>
+                        </div>
+                        <span class="exp-type">Stage</span>
+                    </div>
+                    <div class="exp-date"><i class="fas fa-calendar-alt"></i> Mai-Juin 2022 &middot; F&eacute;vrier-Avril 2023</div>
+                    <ul class="exp-missions">
+                        <li>Installation de mat&eacute;riel informatique</li>
+                        <li>Inventaire du mat&eacute;riel GLPI</li>
+                        <li>Mise &agrave; jour de logiciel</li>
+                        <li>Param&eacute;trage de pare-feu</li>
+                        <li>Masterisation d'un ordinateur</li>
+                        <li>Mise &agrave; jour BIOS</li>
+                    </ul>
+                    <div class="exp-stack">
+                        <span class="stack-item">GLPI</span>
+                        <span class="stack-item">Pare-feu</span>
+                        <span class="stack-item">Masterisation</span>
+                        <span class="stack-item">BIOS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════ PROJETS ══════════ -->
+        <section id="projets" class="section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-folder-open"></i></div>
+                <h2 class="section-title">Projets</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <div class="project-placeholder"><i class="fas fa-network-wired"></i></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">Infrastructure LAN/WAN s&eacute;curis&eacute;e</h3>
+                        <p class="project-desc">
+                            Configuration compl&egrave;te d'une infrastructure r&eacute;seau avec VLAN,
+                            VPN WireGuard, pare-feu Stormshield, supervision Zabbix/Centreon
+                            sur environnement virtualis&eacute; Proxmox.
+                        </p>
+                        <div class="project-tech">
+                            <span>Stormshield</span>
+                            <span>WireGuard</span>
+                            <span>Proxmox</span>
+                            <span>Zabbix</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <div class="project-placeholder"><i class="fas fa-server"></i></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">Active Directory &amp; D&eacute;ploiement automatique</h3>
+                        <p class="project-desc">
+                            D&eacute;ploiement d'un domaine AD avec Zentyal (SambaAD), gestion des GPO,
+                            GLPI / OCS Inventory pour le parc, et d&eacute;ploiement automatique
+                            de postes avec FOG.
+                        </p>
+                        <div class="project-tech">
+                            <span>Active Directory</span>
+                            <span>Zentyal</span>
+                            <span>GLPI</span>
+                            <span>FOG</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <div class="project-placeholder"><i class="fas fa-user-shield"></i></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">S&eacute;curit&eacute; : Pentest &amp; Forensics</h3>
+                        <p class="project-desc">
+                            Lab de pentest web, forensic avec Wireshark, Volatility et Photorec.
+                            XDR avec Wazuh pour la d&eacute;tection d'intrusions et la centralisation
+                            des alertes de s&eacute;curit&eacute;.
+                        </p>
+                        <div class="project-tech">
+                            <span>Wireshark</span>
+                            <span>Volatility</span>
+                            <span>Wazuh</span>
+                            <span>Photorec</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <div class="project-placeholder"><i class="fas fa-code"></i></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">Scripting &amp; Automatisation</h3>
+                        <p class="project-desc">
+                            Scripts d'automatisation en Python, Bash et PowerShell pour la gestion
+                            syst&egrave;me, le d&eacute;ploiement de configurations et la supervision
+                            d'infrastructures.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Bash</span>
+                            <span>PowerShell</span>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════ CERTIFICATIONS ══════════ -->
+        <section id="certifications" class="section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-certificate"></i></div>
+                <h2 class="section-title">Certifications</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="certifications-grid">
+                <div class="cert-card glass-card">
+                    <div class="cert-badge"><i class="fas fa-crosshairs"></i></div>
+                    <div class="cert-info">
+                        <h3 class="cert-name">eJPT - Junior Penetration Tester</h3>
+                        <p class="cert-org">INE Security (eLearnSecurity)</p>
+                        <p class="cert-date"><i class="fas fa-calendar"></i> Obtenue</p>
+                        <p class="cert-id"><i class="fas fa-shield-alt"></i> Tests d'intrusion, exploitation, reconnaissance</p>
+                    </div>
+                    <div class="cert-verified">
+                        <i class="fas fa-check-circle"></i> V&eacute;rifi&eacute;e
+                    </div>
+                </div>
+
+                <div class="cert-card glass-card">
+                    <div class="cert-badge"><i class="fas fa-pen-fancy"></i></div>
+                    <div class="cert-info">
+                        <h3 class="cert-name">Certification Voltaire</h3>
+                        <p class="cert-org">Projet Voltaire</p>
+                        <p class="cert-date"><i class="fas fa-calendar"></i> Obtenue</p>
+                        <p class="cert-id"><i class="fas fa-spell-check"></i> Ma&icirc;trise de la langue fran&ccedil;aise</p>
+                    </div>
+                    <div class="cert-verified">
+                        <i class="fas fa-check-circle"></i> V&eacute;rifi&eacute;e
+                    </div>
+                </div>
+
+                <div class="cert-card glass-card">
+                    <div class="cert-badge"><i class="fas fa-flag"></i></div>
+                    <div class="cert-info">
+                        <h3 class="cert-name">Root-Me - Top 650</h3>
+                        <p class="cert-org">Root-Me.org</p>
+                        <p class="cert-date"><i class="fas fa-calendar"></i> Actif</p>
+                        <p class="cert-id"><i class="fas fa-trophy"></i> Classement national top 650</p>
+                    </div>
+                    <div class="cert-verified">
+                        <i class="fas fa-check-circle"></i> Actif
+                    </div>
+                </div>
+
+                <div class="cert-card glass-card">
+                    <div class="cert-badge"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="cert-info">
+                        <h3 class="cert-name">BTS SIO SISR</h3>
+                        <p class="cert-org">Lyc&eacute;e Saint Paul Bourdon Blanc</p>
+                        <p class="cert-date"><i class="fas fa-calendar"></i> 2024 - 2026</p>
+                        <p class="cert-id"><i class="fas fa-book"></i> Option SISR - Bac+2</p>
+                    </div>
+                    <div class="cert-verified">
+                        <i class="fas fa-spinner"></i> En cours
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════ VEILLE TECHNOLOGIQUE ══════════ -->
+        <section id="veille" class="section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-lightbulb"></i></div>
+                <h2 class="section-title">Veille Technologique</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="veille-intro glass-card">
+                <p>
+                    <i class="fas fa-satellite-dish"></i>
+                    Ma veille technologique porte principalement sur la cybers&eacute;curit&eacute;,
+                    les menaces &eacute;mergentes, les techniques d'attaque et de d&eacute;fense,
+                    ainsi que les &eacute;volutions des infrastructures syst&egrave;mes et r&eacute;seaux.
+                </p>
+            </div>
+
+            <div class="veille-grid">
+                <div class="veille-card glass-card">
+                    <div class="veille-icon"><i class="fas fa-bug"></i></div>
+                    <h3 class="veille-title">Vuln&eacute;rabilit&eacute;s &amp; CVE</h3>
+                    <p class="veille-desc">
+                        Suivi des nouvelles vuln&eacute;rabilit&eacute;s (CVE), zero-days et alertes de s&eacute;curit&eacute;.
+                        Analyse des vecteurs d'attaque et des correctifs publi&eacute;s par les &eacute;diteurs.
+                    </p>
+                    <div class="veille-sources">
+                        <span><i class="fas fa-link"></i> CERT-FR</span>
+                        <span><i class="fas fa-link"></i> NVD / MITRE</span>
+                        <span><i class="fas fa-link"></i> ANSSI</span>
+                    </div>
+                    <div class="veille-activity">
+                        <div class="activity-bar" style="--activity: 95%"></div>
+                        <span>Tr&egrave;s active</span>
+                    </div>
+                </div>
+
+                <div class="veille-card glass-card">
+                    <div class="veille-icon"><i class="fas fa-skull-crossbones"></i></div>
+                    <h3 class="veille-title">Pentesting &amp; CTF</h3>
+                    <p class="veille-desc">
+                        &Eacute;volutions des techniques d'intrusion, XSS, injection SQL,
+                        forensics, analyse m&eacute;moire. Writeups de CTF et participation
+                        aux comp&eacute;titions (Hack'N Game, WorldSkills).
+                    </p>
+                    <div class="veille-sources">
+                        <span><i class="fas fa-link"></i> Root-Me</span>
+                        <span><i class="fas fa-link"></i> HackTheBox</span>
+                        <span><i class="fas fa-link"></i> OWASP</span>
+                    </div>
+                    <div class="veille-activity">
+                        <div class="activity-bar" style="--activity: 90%"></div>
+                        <span>&Eacute;lev&eacute;e</span>
+                    </div>
+                </div>
+
+                <div class="veille-card glass-card">
+                    <div class="veille-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="veille-title">D&eacute;fense &amp; Blue Team</h3>
+                    <p class="veille-desc">
+                        XDR (Wazuh), SIEM, d&eacute;tection d'intrusions, hardening syst&egrave;me,
+                        supervision (Zabbix, Centreon) et r&eacute;ponse aux incidents de s&eacute;curit&eacute;.
+                    </p>
+                    <div class="veille-sources">
+                        <span><i class="fas fa-link"></i> MITRE ATT&CK</span>
+                        <span><i class="fas fa-link"></i> SANS</span>
+                        <span><i class="fas fa-link"></i> Wazuh Blog</span>
+                    </div>
+                    <div class="veille-activity">
+                        <div class="activity-bar" style="--activity: 80%"></div>
+                        <span>&Eacute;lev&eacute;e</span>
+                    </div>
+                </div>
+
+                <div class="veille-card glass-card">
+                    <div class="veille-icon"><i class="fas fa-server"></i></div>
+                    <h3 class="veille-title">Infrastructure &amp; Virtualisation</h3>
+                    <p class="veille-desc">
+                        &Eacute;volutions de Proxmox, VMware, Docker, d&eacute;ploiement automatis&eacute;
+                        (FOG), VPN (WireGuard) et pare-feu nouvelle g&eacute;n&eacute;ration (Stormshield).
+                    </p>
+                    <div class="veille-sources">
+                        <span><i class="fas fa-link"></i> Proxmox Forum</span>
+                        <span><i class="fas fa-link"></i> Docker Blog</span>
+                        <span><i class="fas fa-link"></i> Stormshield</span>
+                    </div>
+                    <div class="veille-activity">
+                        <div class="activity-bar" style="--activity: 70%"></div>
+                        <span>Mod&eacute;r&eacute;e</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════ CONTACT ══════════ -->
+        <section id="contact" class="section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-envelope"></i></div>
+                <h2 class="section-title">Contact</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info-panel glass-card">
+                    <h3>Connectons-nous</h3>
+                    <p>N'h&eacute;sitez pas &agrave; me contacter pour discuter d'opportunit&eacute;s
+                       en cybers&eacute;curit&eacute;, d'alternance pour mon Bachelor &agrave; l'ESILV,
+                       ou simplement pour &eacute;changer autour de la s&eacute;curit&eacute; informatique.</p>
+
+                    <div class="contact-methods">
+                        <!-- MODIFIABLE -->
+                        <div class="contact-method">
+                            <div class="method-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span class="method-label">Email</span>
+                                <span class="method-value">votre@email.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <span class="method-label">T&eacute;l&eacute;phone</span>
+                                <span class="method-value">+33 6 XX XX XX XX</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <span class="method-label">Localisation</span>
+                                <span class="method-value">Votre Ville, France</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <!-- MODIFIABLE -->
+                        <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link" title="Root-Me"><i class="fas fa-flag"></i></a>
+                        <a href="#" class="social-link" title="Discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form-panel glass-card">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Nom complet</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject"><i class="fas fa-tag"></i> Sujet</label>
+                            <input type="text" id="subject" name="subject" placeholder="Sujet du message" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment-dots"></i> Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Envoyer le message</span>
+                            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 - Portfolio BTS SIO SISR | Cybers&eacute;curit&eacute;</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
