@@ -1460,6 +1460,18 @@ a.cert-verified:hover {
     border: 1px solid rgba(236, 72, 153, 0.3);
 }
 
+.article-cat-offensive-ai {
+    background: rgba(244, 63, 94, 0.15);
+    color: #f43f5e;
+    border: 1px solid rgba(244, 63, 94, 0.3);
+}
+
+.article-cat-agentic {
+    background: rgba(34, 197, 94, 0.15);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
 .article-title {
     font-family: 'Rajdhani', sans-serif;
     font-size: 1.05rem;
