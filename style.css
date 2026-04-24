@@ -693,6 +693,104 @@ body {
     transform: translateY(-2px);
 }
 
+/* --- Skills Accordion (terminal) --- */
+.skills-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0.5rem 0 0 1.5rem;
+}
+
+.skill-category {
+    border-left: 2px solid rgba(14, 165, 233, 0.35);
+    padding-left: 0.8rem;
+}
+
+.skill-category-btn {
+    background: none;
+    border: none;
+    color: var(--terminal-prompt);
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 0;
+    width: 100%;
+    text-align: left;
+}
+
+.skill-category-btn i:first-child {
+    color: var(--terminal-prompt);
+    font-size: 0.95rem;
+}
+
+.skill-category-btn .skill-chevron {
+    margin-left: auto;
+    color: var(--terminal-output);
+    transition: transform 0.3s ease;
+    font-size: 0.75rem;
+}
+
+.skill-category.open > .skill-category-btn .skill-chevron {
+    transform: rotate(90deg);
+}
+
+.skill-category-content {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.6rem 0 0.4rem 0.5rem;
+    flex-wrap: wrap;
+}
+
+.skill-category.open > .skill-category-content {
+    display: flex;
+}
+
+.skill-sub {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-sub-btn {
+    background: none;
+    border: none;
+    color: var(--terminal-text);
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 3px 0;
+    text-align: left;
+}
+
+.skill-sub-btn .skill-chevron {
+    color: var(--terminal-output);
+    transition: transform 0.3s ease;
+    font-size: 0.7rem;
+}
+
+.skill-sub.open > .skill-sub-btn .skill-chevron {
+    transform: rotate(90deg);
+}
+
+.skill-sub-content {
+    display: none;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 0.4rem 0 0.4rem 1rem;
+}
+
+.skill-sub.open > .skill-sub-content {
+    display: flex;
+}
+
 /* --- Details Grid --- */
 .profil-details-grid {
     display: grid;
@@ -794,7 +892,31 @@ body {
     50% { transform: scale(1.5); opacity: 0; }
 }
 
-.timeline-content { padding: 1.8rem; }
+.timeline-content { padding: 1.8rem; position: relative; }
+
+.timeline-logo {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+}
+
+.timeline-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.timeline-content:has(.timeline-logo) { padding-right: 6rem; }
 
 .timeline-date {
     font-family: 'Orbitron', monospace;
@@ -859,6 +981,8 @@ body {
 .exp-company-logo {
     width: 50px;
     height: 50px;
+    min-width: 50px;
+    min-height: 50px;
     background: var(--primary-dim);
     border: 1px solid rgba(14, 165, 233, 0.2);
     border-radius: 12px;
@@ -868,6 +992,14 @@ body {
     color: var(--primary);
     font-size: 1.3rem;
     flex-shrink: 0;
+    overflow: hidden;
+}
+
+.exp-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 4px;
 }
 
 .exp-role {
@@ -972,6 +1104,21 @@ body {
     opacity: 0.25;
     transition: all 0.4s ease;
 }
+
+.project-placeholder.emoji-placeholder {
+    font-size: 5rem;
+    opacity: 1;
+}
+
+.project-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1.5rem;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-logo-img { transform: scale(1.05); }
 
 .project-card:hover .project-placeholder { opacity: 0.1; transform: scale(1.1); }
 
@@ -1120,6 +1267,14 @@ body {
     background: rgba(34, 197, 94, 0.1);
     border-radius: 6px;
     border: 1px solid rgba(34, 197, 94, 0.2);
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+a.cert-verified:hover {
+    background: rgba(34, 197, 94, 0.2);
+    transform: translateY(-2px);
 }
 
 .cert-verified i { margin-right: 4px; }
@@ -1220,6 +1375,125 @@ body {
     color: var(--text-muted);
     white-space: nowrap;
     font-weight: 500;
+}
+
+/* --- Veille Articles - IA & Cybersécurité --- */
+.veille-articles-section {
+    margin-top: 2.5rem;
+}
+
+.veille-articles-heading {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.veille-articles-heading i {
+    color: var(--primary);
+    margin-right: 10px;
+}
+
+.veille-articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.veille-article {
+    padding: 1.5rem;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.veille-article:hover {
+    transform: translateY(-4px);
+    border-left-color: var(--primary);
+    box-shadow: 0 8px 25px rgba(14, 165, 233, 0.15);
+}
+
+.article-category {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.8rem;
+}
+
+.article-cat-threat {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.article-cat-soc {
+    background: rgba(14, 165, 233, 0.15);
+    color: #0ea5e9;
+    border: 1px solid rgba(14, 165, 233, 0.3);
+}
+
+.article-cat-report {
+    background: rgba(168, 85, 247, 0.15);
+    color: #a855f7;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.article-cat-analysis {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.article-cat-deepfake {
+    background: rgba(236, 72, 153, 0.15);
+    color: #ec4899;
+    border: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+.article-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.6rem;
+    line-height: 1.4;
+}
+
+.article-source {
+    font-size: 0.78rem;
+    color: var(--primary);
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+}
+
+.article-source i {
+    margin-right: 4px;
+}
+
+.article-date {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+}
+
+.article-date i {
+    margin-right: 4px;
+}
+
+.article-summary {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
 }
 
 /* ═══════════════════════════════════════════

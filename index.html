@@ -82,14 +82,14 @@
                 <div class="profil-info">
                     <div class="glitch-wrapper">
                         <!-- MODIFIABLE: Votre nom -->
-                        <h1 class="profil-name glitch" data-text="FORICHON Tom">FORICHON Tom<h1>
+                        <h1 class="profil-name glitch" data-text="FORICHON Tom">FORICHON Tom</h1>
                     </div>
                     <!-- MODIFIABLE: Votre titre -->
-                    <p class="profil-title typing-effect">BTS SIO SISR | Cybers&eacute;curit&eacute; &amp; Syst&egrave;mes R&eacute;seaux</p>
+                    <p class="profil-title typing-effect">BTS SIO SISR | Solutions d'Infrastructure, Syst&egrave;mes et R&eacute;seaux</p>
 
                     <div class="profil-stats">
                         <div class="stat-card">
-                            <span class="stat-number" data-count="650">0</span>
+                            <span class="stat-number" data-count="223">0</span>
                             <span class="stat-label">Top Root-Me</span>
                         </div>
                         <div class="stat-card">
@@ -117,55 +117,176 @@
                         <p class="terminal-output">
                             &Eacute;tudiant en BTS SIO option SISR au Lyc&eacute;e Saint Paul Bourdon Blanc,
                             passionn&eacute; par la cybers&eacute;curit&eacute; et l'administration syst&egrave;mes &amp; r&eacute;seaux.
-                            Certifi&eacute; eJPT (INE Security) et Voltaire. Class&eacute; top 650 sur Root-Me,
+                            Certifi&eacute; eJPT (INE Security) et Voltaire. Class&eacute; top 223 sur Root-Me,
                             2&egrave;me au CTF Hack'N Game et 3&egrave;me aux WorldSkills Cybers&eacute;curit&eacute;.
                         </p>
                         <p><span class="terminal-prompt">$</span> <span class="terminal-cmd">cat /etc/skills</span></p>
-                        <div class="skills-cloud">
-                            <span class="skill-tag">Windows Server</span>
-                            <span class="skill-tag">Active Directory</span>
-                            <span class="skill-tag">Linux</span>
-                            <span class="skill-tag">Zentyal (SambaAD)</span>
-                            <span class="skill-tag">VMware</span>
-                            <span class="skill-tag">Proxmox</span>
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">WireGuard VPN</span>
-                            <span class="skill-tag">Stormshield</span>
-                            <span class="skill-tag">Zabbix</span>
-                            <span class="skill-tag">Centreon</span>
-                            <span class="skill-tag">GLPI</span>
-                            <span class="skill-tag">OCS Inventory</span>
-                            <span class="skill-tag">FOG</span>
-                            <span class="skill-tag">Wireshark</span>
-                            <span class="skill-tag">Volatility</span>
-                            <span class="skill-tag">Wazuh (XDR)</span>
-                            <span class="skill-tag">Pentest Web</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Bash</span>
-                            <span class="skill-tag">PowerShell</span>
-                            <span class="skill-tag">C</span>
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">HTML/CSS</span>
-                            <span class="skill-tag">SQL</span>
+                        <div class="skills-accordion">
+
+                            <!-- SYSTÈMES -->
+                            <div class="skill-category">
+                                <button class="skill-category-btn" onclick="this.parentElement.classList.toggle('open')">
+                                    <i class="fas fa-server"></i>
+                                    <span>Syst&egrave;mes</span>
+                                    <i class="fas fa-chevron-right skill-chevron"></i>
+                                </button>
+                                <div class="skill-category-content">
+                                    <span class="skill-tag">Windows Server</span>
+                                    <span class="skill-tag">Active Directory</span>
+                                    <span class="skill-tag">GPO</span>
+                                    <span class="skill-tag">DNS</span>
+                                    <span class="skill-tag">DHCP</span>
+                                    <span class="skill-tag">Linux</span>
+                                </div>
+                            </div>
+
+                            <!-- VIRTUALISATION -->
+                            <div class="skill-category">
+                                <button class="skill-category-btn" onclick="this.parentElement.classList.toggle('open')">
+                                    <i class="fas fa-cubes"></i>
+                                    <span>Virtualisation</span>
+                                    <i class="fas fa-chevron-right skill-chevron"></i>
+                                </button>
+                                <div class="skill-category-content">
+                                    <span class="skill-tag">Proxmox</span>
+                                    <span class="skill-tag">VMware</span>
+                                    <span class="skill-tag">Docker</span>
+                                    <span class="skill-tag">Portainer</span>
+                                </div>
+                            </div>
+
+                            <!-- RÉSEAUX -->
+                            <div class="skill-category">
+                                <button class="skill-category-btn" onclick="this.parentElement.classList.toggle('open')">
+                                    <i class="fas fa-network-wired"></i>
+                                    <span>R&eacute;seaux</span>
+                                    <i class="fas fa-chevron-right skill-chevron"></i>
+                                </button>
+                                <div class="skill-category-content">
+                                    <span class="skill-tag">TCP/IP</span>
+                                    <span class="skill-tag">VLANs</span>
+                                    <span class="skill-tag">802.1X</span>
+                                    <span class="skill-tag">Stormshield</span>
+                                    <span class="skill-tag">Cisco</span>
+                                    <span class="skill-tag">WAF</span>
+                                    <span class="skill-tag">WireGuard</span>
+                                    <span class="skill-tag">Squid</span>
+                                </div>
+                            </div>
+
+                            <!-- SCRIPTING -->
+                            <div class="skill-category">
+                                <button class="skill-category-btn" onclick="this.parentElement.classList.toggle('open')">
+                                    <i class="fas fa-terminal"></i>
+                                    <span>Scripting</span>
+                                    <i class="fas fa-chevron-right skill-chevron"></i>
+                                </button>
+                                <div class="skill-category-content">
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Bash</span>
+                                    <span class="skill-tag">PowerShell</span>
+                                    <span class="skill-tag">SQL</span>
+                                    <span class="skill-tag">Ansible</span>
+                                </div>
+                            </div>
+
+                            <!-- SUPERVISION -->
+                            <div class="skill-category">
+                                <button class="skill-category-btn" onclick="this.parentElement.classList.toggle('open')">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Supervision</span>
+                                    <i class="fas fa-chevron-right skill-chevron"></i>
+                                </button>
+                                <div class="skill-category-content">
+                                    <span class="skill-tag">Zabbix</span>
+                                    <span class="skill-tag">Centreon</span>
+                                </div>
+                            </div>
+
+                            <!-- BLUE TEAM & SIEM -->
+                            <div class="skill-category">
+                                <button class="skill-category-btn" onclick="this.parentElement.classList.toggle('open')">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Blue Team &amp; SIEM</span>
+                                    <i class="fas fa-chevron-right skill-chevron"></i>
+                                </button>
+                                <div class="skill-category-content">
+                                    <span class="skill-tag">Wazuh</span>
+                                    <span class="skill-tag">Grafana/Loki</span>
+                                    <span class="skill-tag">Kibana</span>
+                                    <span class="skill-tag">Wireshark</span>
+                                    <span class="skill-tag">MITRE ATT&amp;CK</span>
+                                    <span class="skill-tag">Threat Intelligence</span>
+                                </div>
+                            </div>
+
+                            <!-- FORENSICS -->
+                            <div class="skill-category">
+                                <button class="skill-category-btn" onclick="this.parentElement.classList.toggle('open')">
+                                    <i class="fas fa-search"></i>
+                                    <span>Forensics</span>
+                                    <i class="fas fa-chevron-right skill-chevron"></i>
+                                </button>
+                                <div class="skill-category-content">
+                                    <span class="skill-tag">Volatility</span>
+                                    <span class="skill-tag">Autopsy</span>
+                                    <span class="skill-tag">FTK Imager</span>
+                                    <span class="skill-tag">Analyse MFT</span>
+                                    <span class="skill-tag">Wireshark</span>
+                                </div>
+                            </div>
+
+                            <!-- REVERSE ENGINEERING -->
+                            <div class="skill-category">
+                                <button class="skill-category-btn" onclick="this.parentElement.classList.toggle('open')">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>Reverse Engineering</span>
+                                    <i class="fas fa-chevron-right skill-chevron"></i>
+                                </button>
+                                <div class="skill-category-content">
+                                    <span class="skill-tag">Ghidra</span>
+                                    <span class="skill-tag">GDB</span>
+                                    <span class="skill-tag">ltrace</span>
+                                </div>
+                            </div>
+
+                            <!-- RED TEAM -->
+                            <div class="skill-category">
+                                <button class="skill-category-btn" onclick="this.parentElement.classList.toggle('open')">
+                                    <i class="fas fa-user-secret"></i>
+                                    <span>Red Team</span>
+                                    <i class="fas fa-chevron-right skill-chevron"></i>
+                                </button>
+                                <div class="skill-category-content">
+                                    <span class="skill-tag">Nmap</span>
+                                    <span class="skill-tag">Burp Suite</span>
+                                    <span class="skill-tag">FFUF / Gobuster</span>
+                                    <span class="skill-tag">Impacket</span>
+                                    <span class="skill-tag">Exploitation CVE</span>
+                                    <span class="skill-tag">Privesc</span>
+                                    <span class="skill-tag">Pentest Web (SQLi, XSS, CSRF)</span>
+                                    <span class="skill-tag">Pentest AD (Golden Ticket, Kerberoasting, sAMAccountName Spoofing)</span>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="profil-details-grid">
-                <!-- MODIFIABLE -->
                 <div class="detail-card">
                     <i class="fas fa-map-marker-alt"></i>
                     <div>
                         <span class="detail-label">Localisation</span>
-                        <span class="detail-value">Votre Ville, France</span>
+                        <span class="detail-value">Orl&eacute;ans, France</span>
                     </div>
                 </div>
                 <div class="detail-card">
                     <i class="fas fa-envelope"></i>
                     <div>
                         <span class="detail-label">Email</span>
-                        <span class="detail-value">votre@email.com</span>
+                        <span class="detail-value">to.forichon@gmail.com</span>
                     </div>
                 </div>
                 <div class="detail-card">
@@ -178,22 +299,22 @@
                 <div class="detail-card">
                     <i class="fas fa-language"></i>
                     <div>
-                        <span class="detail-label">Langue</span>
-                        <span class="detail-value">Anglais</span>
+                        <span class="detail-label">Langues</span>
+                        <span class="detail-value">Fran&ccedil;ais &amp; Anglais</span>
                     </div>
                 </div>
                 <div class="detail-card">
                     <i class="fab fa-linkedin"></i>
                     <div>
                         <span class="detail-label">LinkedIn</span>
-                        <span class="detail-value">linkedin.com/in/votre-profil</span>
+                        <span class="detail-value">linkedin.com/in/tom-f-390421354</span>
                     </div>
                 </div>
                 <div class="detail-card">
                     <i class="fas fa-flag"></i>
                     <div>
                         <span class="detail-label">Root-Me</span>
-                        <span class="detail-value">Top 650 - root-me.org</span>
+                        <span class="detail-value">Neyzz &middot; Top 223</span>
                     </div>
                 </div>
             </div>
@@ -207,9 +328,11 @@
                 <div class="section-line"></div>
             </div>
 
+            <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker"><div class="marker-pulse"></div></div>
                     <div class="timeline-content glass-card">
+                        <div class="timeline-logo"><img src="assets/stpbb.png" alt="Saint Paul Bourdon Blanc"></div>
                         <div class="timeline-date"><i class="fas fa-calendar-alt"></i> Sept. 2024 - Juin 2026</div>
                         <h3 class="timeline-title">BTS SIO - Option SISR</h3>
                         <p class="timeline-institution">
@@ -233,6 +356,7 @@
                 <div class="timeline-item">
                     <div class="timeline-marker"><div class="marker-pulse"></div></div>
                     <div class="timeline-content glass-card">
+                        <div class="timeline-logo"><img src="assets/stpbb.png" alt="Saint Paul Bourdon Blanc"></div>
                         <div class="timeline-date"><i class="fas fa-calendar-alt"></i> Sept. 2021 - Juin 2024</div>
                         <h3 class="timeline-title">Baccalaur&eacute;at Professionnel Syst&egrave;me Num&eacute;rique</h3>
                         <p class="timeline-institution">
@@ -332,7 +456,7 @@
 
                 <div class="experience-card glass-card">
                     <div class="exp-header">
-                        <div class="exp-company-logo"><i class="fas fa-landmark"></i></div>
+                        <div class="exp-company-logo"><img src="assets/urssaf.png" alt="URSSAF" class="exp-logo-img"></div>
                         <div>
                             <h3 class="exp-role">Stagiaire - URSSAF</h3>
                             <p class="exp-company">URSSAF</p>
@@ -355,6 +479,30 @@
                         <span class="stack-item">BIOS</span>
                     </div>
                 </div>
+
+                <div class="experience-card glass-card">
+                    <div class="exp-header">
+                        <div class="exp-company-logo"><img src="assets/ffss.png" alt="FFSS 45" class="exp-logo-img"></div>
+                        <div>
+                            <h3 class="exp-role">Administrateur Syst&egrave;mes &amp; R&eacute;seaux - FFSS 45</h3>
+                            <p class="exp-company">F&eacute;d&eacute;ration Fran&ccedil;aise de Sauvetage et de Secourisme &middot; Loiret</p>
+                        </div>
+                        <span class="exp-type">Stage</span>
+                    </div>
+                    <div class="exp-date"><i class="fas fa-calendar-alt"></i> F&eacute;vrier - Mars 2026</div>
+                    <ul class="exp-missions">
+                        <li>Remplacement du routeur existant par un &eacute;quipement UniFi</li>
+                        <li>Installation et configuration d'un point d'acc&egrave;s UniFi avec SSID multiples + portail captif</li>
+                        <li>Segmentation VLAN (Admin, Formation, Invit&eacute;s, IoT)</li>
+                        <li>Authentification 802.1X via serveur RADIUS pour le r&eacute;seau interne</li>
+                        <li>R&eacute;daction de la documentation technique et formation des r&eacute;f&eacute;rents</li>
+                    </ul>
+                    <div class="exp-stack">
+                        <span class="stack-item">UniFi</span>
+                        <span class="stack-item">RADIUS 802.1X</span>
+                        <span class="stack-item">VLAN</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -369,96 +517,74 @@
             <div class="projects-grid">
                 <div class="project-card glass-card">
                     <div class="project-image">
-                        <div class="project-placeholder"><i class="fas fa-network-wired"></i></div>
-                        <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                        </div>
+                        <img src="assets/iuto.jpg" alt="IUT d'Orl&eacute;ans" class="project-logo-img">
                     </div>
                     <div class="project-info">
-                        <h3 class="project-name">Infrastructure LAN/WAN s&eacute;curis&eacute;e</h3>
+                        <h3 class="project-name">Infrastructure r&eacute;seau IUT'O</h3>
                         <p class="project-desc">
-                            Configuration compl&egrave;te d'une infrastructure r&eacute;seau avec VLAN,
-                            VPN WireGuard, pare-feu Stormshield, supervision Zabbix/Centreon
-                            sur environnement virtualis&eacute; Proxmox.
-                        </p>
-                        <div class="project-tech">
-                            <span>Stormshield</span>
-                            <span>WireGuard</span>
-                            <span>Proxmox</span>
-                            <span>Zabbix</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card glass-card">
-                    <div class="project-image">
-                        <div class="project-placeholder"><i class="fas fa-server"></i></div>
-                        <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-name">Active Directory &amp; D&eacute;ploiement automatique</h3>
-                        <p class="project-desc">
-                            D&eacute;ploiement d'un domaine AD avec Zentyal (SambaAD), gestion des GPO,
-                            GLPI / OCS Inventory pour le parc, et d&eacute;ploiement automatique
-                            de postes avec FOG.
+                            Projet d'infrastructure compl&egrave;te pour l'IUT d'Orl&eacute;ans&nbsp;:
+                            domaine Active Directory, gestion de parc avec GLPI, supervision Zabbix,
+                            d&eacute;ploiement automatis&eacute; des postes avec FOG, centralisation
+                            des logs via Grafana Loki et XDR Wazuh, serveur de fichiers et serveur
+                            d'impression, serveur de messagerie iRedMail et Nextcloud, automatisation
+                            via Ansible, pare-feu Stormshield et switching Cisco.
                         </p>
                         <div class="project-tech">
                             <span>Active Directory</span>
-                            <span>Zentyal</span>
                             <span>GLPI</span>
+                            <span>Zabbix</span>
                             <span>FOG</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card glass-card">
-                    <div class="project-image">
-                        <div class="project-placeholder"><i class="fas fa-user-shield"></i></div>
-                        <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-name">S&eacute;curit&eacute; : Pentest &amp; Forensics</h3>
-                        <p class="project-desc">
-                            Lab de pentest web, forensic avec Wireshark, Volatility et Photorec.
-                            XDR avec Wazuh pour la d&eacute;tection d'intrusions et la centralisation
-                            des alertes de s&eacute;curit&eacute;.
-                        </p>
-                        <div class="project-tech">
-                            <span>Wireshark</span>
-                            <span>Volatility</span>
+                            <span>Grafana Loki</span>
                             <span>Wazuh</span>
-                            <span>Photorec</span>
+                            <span>iRedMail</span>
+                            <span>Nextcloud</span>
+                            <span>Ansible</span>
+                            <span>Stormshield</span>
+                            <span>Cisco</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card glass-card">
                     <div class="project-image">
-                        <div class="project-placeholder"><i class="fas fa-code"></i></div>
-                        <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                        </div>
+                        <img src="assets/learningtree.png" alt="Learning Tree" class="project-logo-img">
                     </div>
                     <div class="project-info">
-                        <h3 class="project-name">Scripting &amp; Automatisation</h3>
+                        <h3 class="project-name">Learning Tree</h3>
                         <p class="project-desc">
-                            Scripts d'automatisation en Python, Bash et PowerShell pour la gestion
-                            syst&egrave;me, le d&eacute;ploiement de configurations et la supervision
-                            d'infrastructures.
+                            Mise en place d'un environnement r&eacute;seau s&eacute;curis&eacute; orient&eacute;
+                            collaboration&nbsp;: domaine Active Directory pour la gestion centralis&eacute;e
+                            des utilisateurs et des droits, partage de fichiers via WebDAV, configuration
+                            des r&egrave;gles de filtrage et de NAT pour exposer les services tout en
+                            isolant le r&eacute;seau interne.
                         </p>
                         <div class="project-tech">
-                            <span>Python</span>
-                            <span>Bash</span>
-                            <span>PowerShell</span>
-                            <span>SQL</span>
+                            <span>Active Directory</span>
+                            <span>WebDAV</span>
+                            <span>Filtrage</span>
+                            <span>NAT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <div class="project-placeholder emoji-placeholder">&#127970;</div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">BEG</h3>
+                        <p class="project-desc">
+                            D&eacute;ploiement d'une infrastructure r&eacute;seau pour le Bureau d'&Eacute;tudes
+                            BEG&nbsp;: installation et administration d'un Active Directory, mise en place
+                            d'un partage de fichiers WebDAV pour les &eacute;quipes, et configuration du
+                            filtrage et du NAT au niveau du pare-feu pour s&eacute;curiser les acc&egrave;s
+                            entrants et sortants.
+                        </p>
+                        <div class="project-tech">
+                            <span>Active Directory</span>
+                            <span>WebDAV</span>
+                            <span>Filtrage</span>
+                            <span>NAT</span>
                         </div>
                     </div>
                 </div>
@@ -482,9 +608,9 @@
                         <p class="cert-date"><i class="fas fa-calendar"></i> Obtenue</p>
                         <p class="cert-id"><i class="fas fa-shield-alt"></i> Tests d'intrusion, exploitation, reconnaissance</p>
                     </div>
-                    <div class="cert-verified">
+                    <a href="https://certs.ine.com/8e9b107b-6e5c-4afd-a4dd-36a4ef3035ea#acc.t9T16wKM" target="_blank" rel="noopener noreferrer" class="cert-verified">
                         <i class="fas fa-check-circle"></i> V&eacute;rifi&eacute;e
-                    </div>
+                    </a>
                 </div>
 
                 <div class="cert-card glass-card">
@@ -503,10 +629,10 @@
                 <div class="cert-card glass-card">
                     <div class="cert-badge"><i class="fas fa-flag"></i></div>
                     <div class="cert-info">
-                        <h3 class="cert-name">Root-Me - Top 650</h3>
-                        <p class="cert-org">Root-Me.org</p>
+                        <h3 class="cert-name">Root-Me - Top 223</h3>
+                        <p class="cert-org">Root-Me.org &middot; Neyzz</p>
                         <p class="cert-date"><i class="fas fa-calendar"></i> Actif</p>
-                        <p class="cert-id"><i class="fas fa-trophy"></i> Classement national top 650</p>
+                        <p class="cert-id"><i class="fas fa-trophy"></i> Classement national top 223</p>
                     </div>
                     <div class="cert-verified">
                         <i class="fas fa-check-circle"></i> Actif
@@ -539,84 +665,87 @@
             <div class="veille-intro glass-card">
                 <p>
                     <i class="fas fa-satellite-dish"></i>
-                    Ma veille technologique porte principalement sur la cybers&eacute;curit&eacute;,
-                    les menaces &eacute;mergentes, les techniques d'attaque et de d&eacute;fense,
-                    ainsi que les &eacute;volutions des infrastructures syst&egrave;mes et r&eacute;seaux.
+                    Ma veille technologique porte sur l'utilisation de l'<strong>intelligence artificielle
+                    dans la cybers&eacute;curit&eacute;</strong> : automatisation des SOC, IA agentique,
+                    d&eacute;tection de deepfakes, menaces offensives li&eacute;es &agrave; l'IA et
+                    affrontement IA contre IA dans la d&eacute;fense des syst&egrave;mes d'information.
                 </p>
             </div>
 
             <div class="veille-grid">
                 <div class="veille-card glass-card">
-                    <div class="veille-icon"><i class="fas fa-bug"></i></div>
-                    <h3 class="veille-title">Vuln&eacute;rabilit&eacute;s &amp; CVE</h3>
+                    <div class="veille-icon"><i class="fas fa-robot"></i></div>
+                    <h3 class="veille-title">IA &amp; Cybers&eacute;curit&eacute;</h3>
                     <p class="veille-desc">
-                        Suivi des nouvelles vuln&eacute;rabilit&eacute;s (CVE), zero-days et alertes de s&eacute;curit&eacute;.
-                        Analyse des vecteurs d'attaque et des correctifs publi&eacute;s par les &eacute;diteurs.
+                        Utilisation de l'intelligence artificielle dans la cybers&eacute;curit&eacute; :
+                        automatisation des SOC, IA agentique, d&eacute;tection de deepfakes,
+                        menaces offensives li&eacute;es &agrave; l'IA et guerre des machines.
                     </p>
                     <div class="veille-sources">
-                        <span><i class="fas fa-link"></i> CERT-FR</span>
-                        <span><i class="fas fa-link"></i> NVD / MITRE</span>
-                        <span><i class="fas fa-link"></i> ANSSI</span>
+                        <span><i class="fas fa-link"></i> ZDNET</span>
+                        <span><i class="fas fa-link"></i> LeMagIT</span>
+                        <span><i class="fas fa-link"></i> SOC Prime</span>
+                        <span><i class="fas fa-link"></i> Google Alertes</span>
                     </div>
                     <div class="veille-activity">
-                        <div class="activity-bar" style="--activity: 95%"></div>
-                        <span>Tr&egrave;s active</span>
-                    </div>
-                </div>
-
-                <div class="veille-card glass-card">
-                    <div class="veille-icon"><i class="fas fa-skull-crossbones"></i></div>
-                    <h3 class="veille-title">Pentesting &amp; CTF</h3>
-                    <p class="veille-desc">
-                        &Eacute;volutions des techniques d'intrusion, XSS, injection SQL,
-                        forensics, analyse m&eacute;moire. Writeups de CTF et participation
-                        aux comp&eacute;titions (Hack'N Game, WorldSkills).
-                    </p>
-                    <div class="veille-sources">
-                        <span><i class="fas fa-link"></i> Root-Me</span>
-                        <span><i class="fas fa-link"></i> HackTheBox</span>
-                        <span><i class="fas fa-link"></i> OWASP</span>
-                    </div>
-                    <div class="veille-activity">
-                        <div class="activity-bar" style="--activity: 90%"></div>
+                        <div class="activity-bar" style="--activity: 85%"></div>
                         <span>&Eacute;lev&eacute;e</span>
                     </div>
                 </div>
+            </div>
 
-                <div class="veille-card glass-card">
-                    <div class="veille-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3 class="veille-title">D&eacute;fense &amp; Blue Team</h3>
-                    <p class="veille-desc">
-                        XDR (Wazuh), SIEM, d&eacute;tection d'intrusions, hardening syst&egrave;me,
-                        supervision (Zabbix, Centreon) et r&eacute;ponse aux incidents de s&eacute;curit&eacute;.
-                    </p>
-                    <div class="veille-sources">
-                        <span><i class="fas fa-link"></i> MITRE ATT&CK</span>
-                        <span><i class="fas fa-link"></i> SANS</span>
-                        <span><i class="fas fa-link"></i> Wazuh Blog</span>
-                    </div>
-                    <div class="veille-activity">
-                        <div class="activity-bar" style="--activity: 80%"></div>
-                        <span>&Eacute;lev&eacute;e</span>
-                    </div>
-                </div>
+            <div class="veille-articles-section">
+                <h3 class="veille-articles-heading"><i class="fas fa-robot"></i> S&eacute;lection d'articles &mdash; IA &amp; Cybers&eacute;curit&eacute;</h3>
+                <div class="veille-articles-grid">
 
-                <div class="veille-card glass-card">
-                    <div class="veille-icon"><i class="fas fa-server"></i></div>
-                    <h3 class="veille-title">Infrastructure &amp; Virtualisation</h3>
-                    <p class="veille-desc">
-                        &Eacute;volutions de Proxmox, VMware, Docker, d&eacute;ploiement automatis&eacute;
-                        (FOG), VPN (WireGuard) et pare-feu nouvelle g&eacute;n&eacute;ration (Stormshield).
-                    </p>
-                    <div class="veille-sources">
-                        <span><i class="fas fa-link"></i> Proxmox Forum</span>
-                        <span><i class="fas fa-link"></i> Docker Blog</span>
-                        <span><i class="fas fa-link"></i> Stormshield</span>
-                    </div>
-                    <div class="veille-activity">
-                        <div class="activity-bar" style="--activity: 70%"></div>
-                        <span>Mod&eacute;r&eacute;e</span>
-                    </div>
+                    <a href="https://socprime.com/fr/active-threats/de-lautomatisation-a-linfection-comment-les-competences-de-lagent-ia-openclaw-sont-armees/" target="_blank" rel="noopener noreferrer" class="veille-article glass-card">
+                        <div class="article-category article-cat-threat"><i class="fas fa-skull-crossbones"></i> Menace offensive</div>
+                        <h4 class="article-title">Comment les comp&eacute;tences de l'agent IA OpenClaw sont arm&eacute;es pour livrer le malware Atomic Stealer</h4>
+                        <p class="article-source"><i class="fas fa-globe"></i> SOC Prime</p>
+                        <p class="article-date"><i class="fas fa-calendar-alt"></i> F&eacute;vrier 2026</p>
+                        <p class="article-summary">Des comp&eacute;tences d'agents IA d&eacute;tourn&eacute;es pour distribuer des malwares : un cas concret de weaponisation de l'IA agentique &agrave; des fins offensives.</p>
+                    </a>
+
+                    <a href="https://www.zdnet.fr/actualites/qevlar-ai-30-millions-de-plus-pour-le-specialiste-de-lautomatisation-des-soc-491635.htm" target="_blank" rel="noopener noreferrer" class="veille-article glass-card">
+                        <div class="article-category article-cat-soc"><i class="fas fa-cogs"></i> Automatisation SOC</div>
+                        <h4 class="article-title">Qevlar AI : 30 millions de plus pour le sp&eacute;cialiste de l'automatisation des SOC</h4>
+                        <p class="article-source"><i class="fas fa-globe"></i> ZDNET France</p>
+                        <p class="article-date"><i class="fas fa-calendar-alt"></i> Mars 2026</p>
+                        <p class="article-summary">La startup fran&ccedil;aise Qevlar AI l&egrave;ve 30 M$ pour acc&eacute;l&eacute;rer l'automatisation des SOC par l'IA. Un signal fort de maturit&eacute; du march&eacute;.</p>
+                    </a>
+
+                    <a href="https://www.itforbusiness.fr/la-cybersecurite-a-ere-de-ia-en-2026-enfin-des-chiffres-interessants-rapport-darktrace-100081" target="_blank" rel="noopener noreferrer" class="veille-article glass-card">
+                        <div class="article-category article-cat-report"><i class="fas fa-chart-bar"></i> Rapport</div>
+                        <h4 class="article-title">La cybers&eacute;curit&eacute; &agrave; l'&egrave;re de l'IA en 2026 : enfin des chiffres int&eacute;ressants (Darktrace)</h4>
+                        <p class="article-source"><i class="fas fa-globe"></i> ITforBusiness</p>
+                        <p class="article-date"><i class="fas fa-calendar-alt"></i> F&eacute;vrier 2026</p>
+                        <p class="article-summary">Le rapport Darktrace fournit des donn&eacute;es chiffr&eacute;es cl&eacute;s sur l'&eacute;tat de l'IA en cybers&eacute;curit&eacute; : adoption, menaces et tendances du march&eacute;.</p>
+                    </a>
+
+                    <a href="https://www.alliancy.fr/la-cybersecurite-entre-dans-lere-de-la-guerre-des-machines-2c7e170a-a1bf-4201-8432-a4c31f32b8ce" target="_blank" rel="noopener noreferrer" class="veille-article glass-card">
+                        <div class="article-category article-cat-analysis"><i class="fas fa-chess"></i> Analyse strat&eacute;gique</div>
+                        <h4 class="article-title">La cybers&eacute;curit&eacute; entre dans l'&egrave;re de la guerre des machines</h4>
+                        <p class="article-source"><i class="fas fa-globe"></i> Alliancy</p>
+                        <p class="article-date"><i class="fas fa-calendar-alt"></i> Mars 2026</p>
+                        <p class="article-summary">Analyse de l'affrontement IA contre IA en cybers&eacute;curit&eacute; : quand les d&eacute;fenses automatis&eacute;es font face aux attaques pilot&eacute;es par l'intelligence artificielle.</p>
+                    </a>
+
+                    <a href="https://www.lemagit.fr/actualites/366638742/5-outils-de-detection-des-deepfakes-pour-proteger-les-utilisateurs-professionnels" target="_blank" rel="noopener noreferrer" class="veille-article glass-card">
+                        <div class="article-category article-cat-deepfake"><i class="fas fa-user-secret"></i> Deepfake</div>
+                        <h4 class="article-title">5 outils de d&eacute;tection des deepfakes pour prot&eacute;ger les utilisateurs professionnels</h4>
+                        <p class="article-source"><i class="fas fa-globe"></i> LeMagIT</p>
+                        <p class="article-date"><i class="fas fa-calendar-alt"></i> F&eacute;vrier 2026</p>
+                        <p class="article-summary">Comparatif pratique de 5 solutions de d&eacute;tection de deepfakes destin&eacute;es aux professionnels : fonctionnalit&eacute;s, limites et cas d'usage.</p>
+                    </a>
+
+                    <a href="https://itsocial.fr/cybersecurite/cybersecurite-actualites/datadog-bits-ai-security-analyst-un-agent-dinvestigation-autonome-integre-a-cloud-siem/" target="_blank" rel="noopener noreferrer" class="veille-article glass-card">
+                        <div class="article-category article-cat-soc"><i class="fas fa-cogs"></i> IA agentique</div>
+                        <h4 class="article-title">Datadog Bits AI Security Analyst : un agent d'investigation autonome int&eacute;gr&eacute; &agrave; Cloud SIEM</h4>
+                        <p class="article-source"><i class="fas fa-globe"></i> IT Social</p>
+                        <p class="article-date"><i class="fas fa-calendar-alt"></i> Mars 2026</p>
+                        <p class="article-summary">Datadog int&egrave;gre un agent IA autonome dans son Cloud SIEM pour automatiser les investigations de s&eacute;curit&eacute;. L'IA agentique au service du SOC.</p>
+                    </a>
+
                 </div>
             </div>
         </section>
@@ -633,36 +762,32 @@
                 <div class="contact-info-panel glass-card">
                     <h3>Connectons-nous</h3>
                     <div class="contact-methods">
-                        <!-- MODIFIABLE -->
                         <div class="contact-method">
                             <div class="method-icon"><i class="fas fa-envelope"></i></div>
                             <div>
                                 <span class="method-label">Email</span>
-                                <span class="method-value">votre@email.com</span>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <div class="method-icon"><i class="fas fa-phone"></i></div>
-                            <div>
-                                <span class="method-label">T&eacute;l&eacute;phone</span>
-                                <span class="method-value">+33 6 XX XX XX XX</span>
+                                <span class="method-value">to.forichon@gmail.com</span>
                             </div>
                         </div>
                         <div class="contact-method">
                             <div class="method-icon"><i class="fas fa-map-marker-alt"></i></div>
                             <div>
                                 <span class="method-label">Localisation</span>
-                                <span class="method-value">Votre Ville, France</span>
+                                <span class="method-value">Orl&eacute;ans, France</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <div>
+                                <span class="method-label">&Eacute;tablissement</span>
+                                <span class="method-value">Lyc&eacute;e Saint Paul Bourdon Blanc</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="social-links">
-                        <!-- MODIFIABLE -->
-                        <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link" title="Root-Me"><i class="fas fa-flag"></i></a>
-                        <a href="#" class="social-link" title="Discord"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.linkedin.com/in/tom-f-390421354" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.root-me.org/Neyzz-959267?lang=fr" target="_blank" rel="noopener noreferrer" class="social-link" title="Root-Me"><i class="fas fa-flag"></i></a>
                     </div>
                 </div>
 
@@ -696,7 +821,7 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2025 - Portfolio BTS SIO SISR | Cybers&eacute;curit&eacute;</p>
+            <p>&copy; 2026 - FORICHON Tom &middot; Portfolio BTS SIO SISR | Cybers&eacute;curit&eacute;</p>
         </div>
     </footer>
 
