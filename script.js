@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (progress < 1) {
                     requestAnimationFrame(update);
                 } else {
-                    counter.textContent = target === 650 ? 'Top ' + target : target + '+';
+                    counter.textContent = target === 650 ? 'Top ' + target : target;
                 }
             }
 
