@@ -150,32 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(typeChar, 800);
     }
 
-    // ── Formulaire contact ──
-    const form = document.getElementById('contact-form');
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = form.querySelector('.submit-btn');
-            const btnText = btn.querySelector('.btn-text');
-            const original = btnText.textContent;
-
-            btnText.textContent = 'Envoi en cours...';
-            btn.style.pointerEvents = 'none';
-
-            setTimeout(() => {
-                btnText.textContent = 'Message envoyé !';
-                btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
-
-                setTimeout(() => {
-                    btnText.textContent = original;
-                    btn.style.background = '';
-                    btn.style.pointerEvents = '';
-                    form.reset();
-                }, 2500);
-            }, 1500);
-        });
-    }
-
     // ── Particules Canvas ──
     const canvas = document.getElementById('particles-canvas');
     const ctx = canvas.getContext('2d');
